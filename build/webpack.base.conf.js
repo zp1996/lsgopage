@@ -8,7 +8,7 @@ const styleExtensions = process.env.client === 'pc' ? '.less' : '.mobile.less'
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
-
+console.log(vueLoaderConfig);
 module.exports = {
   entry: {
     app: './src/main.js'
@@ -47,6 +47,12 @@ module.exports = {
         loader: 'vue-loader',
         options: vueLoaderConfig
       },
+      // {
+      //   test: /\.less$/,
+      //   loaders: {
+      //
+      //   }
+      // },
       {
         test: /\.js$/,
         loader: 'babel-loader',
