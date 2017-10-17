@@ -1,13 +1,19 @@
 @charset "UTF-8";
 
-@c: red;
+@import "../../helpers/styles/func.less";
 
 body {
-  background: #f0f0f0;
+  .color(#f0f0f0);
+  background: @c;
 }
+@c: red;
 .homepage {
-  height: 100px;
+  .rem-width(600px);
+  .rem-height(200px);
+  margin: auto;
   background: @c;
   color: #fff;
-  margin: auto;
+  h3 {
+    .rem-margin-v(20px);
+  }
 }

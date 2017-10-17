@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+@baseFontSize: 75px;
+
+.rem(@px) {
+  @s: @px / @baseFontSize * 1rem;
+}
+
+.color(@b) {
+  @c: @b
+}
+
+/* 设置宽度 */
+.rem-width(@w) {
+  .rem(@w);
+  width: @s;
+}
+
+/* 设置高度 */
+.rem-height(@h) {
+  .rem(@h);
+  height: @s;
+}
+
+/* 设置margin */
+.rem-margin(@m) {
+  .rem(@m);
+  margin: @s;
+}
+
+/* 设置垂直方向margin */
+.rem-margin-v(@v) {
+  .rem(@v);
+  margin: @s auto;
+}
+
+/* 设置水平方向的margin */
+.rem-margin-c(@v) {
+  .rem(@v);
+  margin: 0px @s;
+}
+
+/* 设置单一margin */
+.rem-margin-top(@v) {
+  .rem(@v);
+  margin-top: @s;
+}
+.rem-margin-bottom(@v) {
+  .rem(@v);
+  margin-bottom: @s;
+}
+.rem-margin-left(@v) {
+  .rem(@v);
+  margin-left: @s;
+}
+.rem-margin-right(@v) {
+  .rem(@v);
+  margin-right: @s;
+}
+
+/* 设置padding */
+.rem-padding(@p) {
+  .rem(@p);
+  padding: @p;
+}
+
+/* 设置垂直方向padding */
+.rem-padding-v(@v) {
+  .rem(@v);
+  padding: @v 0px;
+}
+
+/* 设置水平方向的padding */
+.rem-padding-c(@v) {
+  .rem(@v);
+  padding: 0px @s;
+}
+
+/* 设置单一padding */
+.rem-padding-top(@v) {
+  .rem(@v);
+  padding-top: @s;
+}
+.rem-padding-bottom(@v) {
+  .rem(@v);
+  padding-bottom: @s;
+}
+.rem-padding-left(@v) {
+  .rem(@v);
+  padding-left: @s;
+}
+.rem-padding-right(@v) {
+  .rem(@v);
+  padding-right: @s;
+}

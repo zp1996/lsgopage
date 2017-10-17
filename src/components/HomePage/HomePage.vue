@@ -3,7 +3,7 @@
     <router-link :to="{ path: '/demo', query: { username: 'zp1996' } }">
       demo
     </router-link>
-    <h2>{{msg}}</h2>
+    <h3>{{msg}}</h3>
   </div>
 </template>
 
