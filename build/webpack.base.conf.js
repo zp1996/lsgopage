@@ -3,16 +3,18 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
-const styleExtensions = process.env.client === 'pc' ? '.less' : '.mobile.less'
+const isPC = process.env.client === 'pc'
+const styleExtensions = isPC ? '.less' : '.mobile.less'
+const entry = { app: './src/main.js' }
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
-console.log(vueLoaderConfig);
+
 module.exports = {
-  entry: {
-    app: './src/main.js'
-  },
+  entry: isPC ? entry : Object.assign(entry, {
+    flexible: './lib/flexible.min.js'
+  }),
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -47,12 +49,6 @@ module.exports = {
         loader: 'vue-loader',
         options: vueLoaderConfig
       },
-      // {
-      //   test: /\.less$/,
-      //   loaders: {
-      //
-      //   }
-      // },
       {
         test: /\.js$/,
         loader: 'babel-loader',

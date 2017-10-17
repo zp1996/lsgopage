@@ -17,15 +17,6 @@
   };
 </script>
 
-<style scoped>
+<style lang="less">
   @import './index';
-  @import "../../helpers/func.less";
-
-  .homepage {
-    width: 600px;
-    height: 100px;
-    background: test(red);
-    color: #fff;
-    margin: auto;
-  }
 </style>

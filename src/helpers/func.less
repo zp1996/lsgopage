@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 @baseFontSize: 75px;
-.function {
-  .rem(@px) {
-    return: @px / @baseFontSize * 1rem;
-  }
-  .test(@c) {
-    return: @c;
-  }
+
+.rem(@px) {
+  @s: @px / @baseFontSize * 1rem;
+}
+
+.color(@b) {
+  @c: @b
 }

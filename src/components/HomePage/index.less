@@ -3,5 +3,14 @@
 @import "../../helpers/func.less";
 
 body {
-  background: test(red);
+  .color(#f0f0f0);
+  background: @c;
+}
+@c: red;
+.homepage {
+  width: 600px;
+  height: 100px;
+  background: @c;
+  color: #fff;
+  margin: auto;
 }
