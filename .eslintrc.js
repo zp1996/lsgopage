@@ -1,5 +1,7 @@
 // https://eslint.org/docs/user-guide/configuring
 
+const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = {
   root: true,
   parser: 'babel-eslint',
@@ -33,7 +35,9 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', {
       'optionalDependencies': ['test/unit/index.js']
     }],
+    // allow console during development
+    'no-console': isProd ? 'on' : 'off',
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': isProd ? 2 : 0
   }
 }

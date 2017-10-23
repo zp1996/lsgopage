@@ -1,10 +1,12 @@
 <template>
-  <div class="homepage">
-    <router-link :to="{ path: '/demo', query: { username: 'zp1996' } }">
-      demo
-    </router-link>
-    <h3>{{msg}}</h3>
-  </div>
+  <Container>
+    <div class="homepage" slot="content">
+      <router-link :to="{ path: '/demo', query: { username: 'zp1996' } }">
+        demo
+      </router-link>
+      <h3>{{msg}}</h3>
+    </div>
+  </Container>
 </template>
 
 <script>
