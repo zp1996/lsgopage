@@ -24,9 +24,6 @@
 
 <script>
   export default {
-    mounted() {
-      console.log(true);
-    },
     data() {
       const { path } = this.$route;
       return {
@@ -44,5 +41,5 @@
 </script>
 
 <style lang="less" scoped>
-  @import "./index";
+  @import './index.less';
 </style>
