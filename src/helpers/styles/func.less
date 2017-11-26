@@ -63,7 +63,7 @@
 /* 设置垂直方向padding */
 .rem-padding-v(@v) {
   .rem(@v);
-  padding: @v 0px;
+  padding: @s 0px;
 }
 
 /* 设置水平方向的padding */
@@ -88,4 +88,13 @@
 .rem-padding-right(@v) {
   .rem(@v);
   padding-right: @s;
+}
+.rem-lh-equal-h(@s) {
+  .rem(@s);
+  line-height: @s;
+  height: @s;
+}
+.rem-translateX(@s) {
+  .rem(@s);
+  transform: translateX(@s);
 }

@@ -6,7 +6,6 @@ const vueLoaderConfig = require('./vue-loader.conf')
 const isPC = process.env.client === 'pc'
 const styleExtensions = isPC ? '.less' : '.mobile.less'
 const entry = { app: './src/main.js' }
-
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }

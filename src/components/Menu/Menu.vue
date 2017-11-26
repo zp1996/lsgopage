@@ -1,29 +1,11 @@
 <template>
-  <header class="menu-wrapper">
-    <div class="menu">
-      <router-link to="/" class="logo">
-        <img :src="logo"/>
-      </router-link>
-      <nav class="nav">
-        <div class="nav-box" v-for="menu in menus">
-          <router-link :to="menu.href" :class="{
-            'nav-link': true,
-            'nav-link-active': path === menu.href
-          }">
-            {{menu.name}}
-          </router-link>
-        </div>
-        <div class="search-area">
-          <input :value="search" class="search-input"/>
-          <span class="search-btn"></span>
-        </div>
-      </nav>
-    </div>
-  </header>
 </template>
 
 <script>
   export default {
+    mounted() {
+      console.log(process.mobile);
+    },
     data() {
       const { path } = this.$route;
       return {
@@ -35,11 +17,12 @@
         ],
         path,
         search: '',
+        mobile: process.mobile,
       };
     },
   };
 </script>
 
 <style lang="less" scoped>
-  @import './index.less';
+  @import './index';
 </style>

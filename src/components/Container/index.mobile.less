@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+@import "../../helpers/styles/func.less";
+@import "../../helpers/styles/variables.less";
+
+.content-wrapper {
+  overflow: hidden;
+  &-touched {
+    .rem-translateX(-@mobile-nav-width);
+    transition: transform 0.3s ease;
+  }
+  &-closed {
+    .rem-translateX(0px);
+    transition: transform 0.3s ease;
+  }
+}
+.menu-wrapper {
+  width: 100%;
+  .rem-height(@mobile-height);
+  background: @bg-color;
+  position: fixed;
+  top: 0px;
+}
+.logo {
+  @h: 80px;
+  @w: 224px;
+  display: inline-block;
+  .rem-width(@w);
+  .rem-height(@h);
+  .rem-margin((@mobile-height - @h) / 2);
+  float: left;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.toggle-btn {
+  .rem-width(@mobile-height);
+  .rem-padding-top(24px);
+  float: right;
+}
+.icon-i {
+  display: block;
+  .rem-height(6px);
+  .rem-width(60px);
+  .rem-margin-v(12px);
+  background: #035cac;
+}
+.content {
+  .rem-margin-top(@mobile-height);
+  background: #fff;
+}
+/* 移动端导航栏样式 */
+.nav {
+  .rem-width(@mobile-nav-width);
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #022055;
+  z-index: @low-index;
+  .rem-padding-v(40px);
+}
+.nav-box {
+  text-align: left;
+  .rem-lh-equal-h(100px);
+  .rem-padding-left(40px);
+}
+.nav-link {
+  color: #eee;
+  font-size: 16px;
+  font-family: 'Microsoft YaHei',Arial,Verdana,sans-serif;
+  text-decoration: none;
+}
