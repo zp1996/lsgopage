@@ -1,15 +1,13 @@
 import Vue from 'vue';
-import Container from 'Components/Container/Container';
-// import Menu from 'Components/Menu/Menu';
 import 'Styles/reset.less';
+import Container from 'Components/Container/index';
 import App from './App';
 import router from './router';
 
 Vue.config.productionTip = false;
 
-// 注册组件
+// register component
 Vue.component('Container', Container);
-// Vue.component('Menu', Menu);
 
 /* eslint-disable no-new */
 new Vue({

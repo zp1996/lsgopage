@@ -30,6 +30,7 @@ module.exports = {
       'Services': resolve('src/services'),
       'Assets': resolve('src/assets'),
       'Styles': resolve('src/helpers/styles'),
+      'Utils': resolve('src/helpers/js'),
       'Pages': resolve('src/pages'),
       '@': resolve('src')
     }

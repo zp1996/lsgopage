@@ -11,6 +11,11 @@
   }
   &-closed {
     .rem-translateX(0px);
+    /*
+      解决副作用：
+        如果fixed元素的父元素的transform不为none的话,会将其fixed降级为absolute
+    */
+    transform: none;
     transition: transform 0.3s ease;
   }
 }
@@ -48,11 +53,11 @@
 }
 .content {
   .rem-margin-top(@mobile-height);
+  height: 700px;
   background: #fff;
 }
 /* 移动端导航栏样式 */
 .nav {
-  .rem-width(@mobile-nav-width);
   position: fixed;
   top: 0px;
   right: 0px;
@@ -60,6 +65,17 @@
   background: #022055;
   z-index: @low-index;
   .rem-padding-v(40px);
+  opacity: 0;
+  &-active {
+    opacity: 1;
+    .rem-width(@mobile-nav-width);
+    transition: width 0.01s ease, opacity 0.01s ease;
+  }
+  &-closed {
+    opacity: 0;
+    .rem-width(0px);
+    transition: width 0.01s 0.3s, opacity 0.01s 0.3s;
+  }
 }
 .nav-box {
   text-align: left;
