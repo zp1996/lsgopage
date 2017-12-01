@@ -16,3 +16,12 @@ new Vue({
   template: '<App/>',
   components: { App },
 });
+
+if (process.mobile) {
+  if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', () => {
+      /* eslint-disable no-undef */
+      FastClick.attach(document.body);
+    }, false);
+  }
+}

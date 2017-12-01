@@ -6,6 +6,8 @@
 .content-wrapper {
   overflow: hidden;
   &-touched {
+    position: relative;
+    z-index: @high-index;
     .rem-translateX(-@mobile-nav-width);
     transition: transform 0.3s ease;
   }
@@ -46,9 +48,9 @@
 }
 .icon-i {
   display: block;
-  .rem-height(6px);
-  .rem-width(60px);
-  .rem-margin-v(12px);
+  height: 3px;
+  width: 30px;
+  margin: 6px auto;
   background: #035cac;
 }
 .content {
@@ -67,6 +69,7 @@
   .rem-padding-v(40px);
   opacity: 0;
   &-active {
+    z-index: @high-index / 2;
     opacity: 1;
     .rem-width(@mobile-nav-width);
     transition: width 0.01s ease, opacity 0.01s ease;
@@ -75,6 +78,11 @@
     opacity: 0;
     .rem-width(0px);
     transition: width 0.01s 0.3s, opacity 0.01s 0.3s;
+  }
+  &-link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
   }
 }
 .nav-box {

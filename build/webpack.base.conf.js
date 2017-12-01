@@ -12,7 +12,7 @@ function resolve (dir) {
 
 module.exports = {
   entry: isPC ? entry : Object.assign(entry, {
-    flexible: './lib/flexible.min.js'
+    mobile: './lib/mobile.js'
   }),
   output: {
     path: config.build.assetsRoot,
