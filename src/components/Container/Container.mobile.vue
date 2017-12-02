@@ -20,6 +20,11 @@
       <div class="content">
         <slot name="content"></slot>
       </div>
+      <footer class="footer">
+        <span>Copyright © {{footer.copyright}}</span>
+        <span>{{footer.record}}</span>
+        <span>公司地址：{{footer.address}}</span>
+      </footer>
     </div>
     <nav :class="{
       'nav': true,

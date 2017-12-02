@@ -55,7 +55,7 @@
 }
 .content {
   .rem-margin-top(@mobile-height);
-  height: 700px;
+  height: 550px;
   background: #fff;
 }
 /* 移动端导航栏样式 */
@@ -68,6 +68,7 @@
   z-index: @low-index;
   .rem-padding-v(40px);
   opacity: 0;
+  overflow-scrolling: touch;
   &-active {
     z-index: @high-index / 2;
     opacity: 1;
@@ -95,4 +96,13 @@
   font-size: 16px;
   font-family: 'Microsoft YaHei',Arial,Verdana,sans-serif;
   text-decoration: none;
+}
+.footer {
+  .rem-padding-v(24px);
+  background: #000;
+  color: #ccc;
+  span {
+    display: block;
+    .rem-height(40px);
+  }
 }

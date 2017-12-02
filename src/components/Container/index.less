@@ -91,3 +91,23 @@
 .content {
   margin-top: @header-height;
 }
+.footer {
+  @h: 20px;
+  padding: 20px;
+  background: #000;
+  color: #ddd;
+  line-height: @h;
+  font-size: @sm-font-size;
+  &-content {
+    margin: auto;
+    height: @h;
+    padding: 0px 12px;
+    text-align: left;
+  }
+  .address {
+    float: right;
+  }
+  .record {
+    margin-left: 20px;
+  }
+}

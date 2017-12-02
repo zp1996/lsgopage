@@ -24,6 +24,13 @@
     <div class="content">
       <slot name="content"></slot>
     </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <span>Copyright © {{footer.copyright}}</span>
+        <span class="record">{{footer.record}}</span>
+        <span class="address">公司地址：{{footer.address}}</span>
+      </div>
+    </footer>
   </div>
 </template>
 
