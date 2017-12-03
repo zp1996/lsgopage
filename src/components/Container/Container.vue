@@ -49,8 +49,6 @@
         ...data,
       };
     },
-    methods: {
-    },
   };
 </script>
 

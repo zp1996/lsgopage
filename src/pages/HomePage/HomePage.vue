@@ -1,10 +1,7 @@
 <template>
   <Container>
     <div class="homepage" slot="content">
-      <router-link :to="{ path: '/demo', query: { username: 'zp1996' } }">
-        demo
-      </router-link>
-      <h3>{{msg}}</h3>
+      <Slider :list="slider.list" :time="slider.time" />
     </div>
   </Container>
 </template>
@@ -15,7 +12,16 @@
   export default {
     data() {
       return {
-        msg: 'Welcome to Your Vue.js App',
+        slider: {
+          list: [
+            'http://www.yijiahe.com.cn/temp/slider_index_02.jpg',
+            'http://www.yijiahe.com.cn/temp/slider_index_01.jpg',
+            'http://www.yijiahe.com.cn/temp/slider_index_03.jpg',
+            'http://www.yijiahe.com.cn/temp/slider_index_06.jpg',
+            'http://www.yijiahe.com.cn/temp/slider_index_05.jpg',
+          ],
+          time: 5000,
+        },
       };
     },
     created() {

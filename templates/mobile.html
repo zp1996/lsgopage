@@ -7,5 +7,22 @@
   </head>
   <body>
     <div id="app"></div>
+    <script type="text/javascript">
+      // 浏览器左右滑动禁止兼容
+      (function() {
+        var xs, xe, ys, ye;
+        document.addEventListener('touchstart', function(e) {
+          xs = e.touches[0].pageX;
+          ys = e.touches[0].pageY;
+        });
+        document.addEventListener('touchmove', function(e){
+          xe = e.touches[0].pageX;
+          ye = e.touches[0].pageY;
+          if (Math.abs(xs - xe) > Math.abs(ys - ye)) {
+            e.preventDefault();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
