@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 @import "../../helpers/styles/func.less";
+@import "../../helpers/styles/variables.less";
+
+@p: 24px;
 
 .slider-container {
   .rem-height(440px);
@@ -10,4 +13,19 @@
 }
 .slider-dots {
   .rem-bottom(24px);
+}
+.title-area {
+  .rem-padding(@p / 2);
+}
+.title {
+  line-height: 1.5;
+  .font-sw(22px);
+  .rem-margin-bottom(@p);
+}
+.small-title {
+  font-size: @font-size;
+}
+.link-to-info {
+  .rem-lh-equal-h(60px);
+  .rem-padding-c(48px);
 }

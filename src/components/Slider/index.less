@@ -2,12 +2,37 @@
 
 @import "../../helpers/styles/variables.less";
 
+@p: 12px;
+
 .slider-container {
   width: 100%;
   height: 625px;
-  background: red;
   overflow: hidden;
 }
 .slider-dots {
   bottom: 24px;
+}
+.title-area {
+  padding: @p;
+}
+.title {
+  line-height: 1.5;
+  .font-sw(4 * @p);
+  margin-bottom: @p;
+}
+.small-title {
+  line-height: 40px;
+  margin-top: @p;
+  .font-sw(2 * @p);
+}
+.big {
+  .title {
+    font-size: 64px;
+  }
+}
+.link-to-info {
+  @s: 44px;
+  padding: 0 @s;
+  line-height: @s;
+  height: @s;
 }
