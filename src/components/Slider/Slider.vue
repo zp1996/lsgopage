@@ -55,7 +55,7 @@
       slider.appendChild(node);
 
       // 自动轮播
-      // this.sport();
+      this.sport();
       // 监听移动事件
       this.move();
     },
@@ -210,7 +210,7 @@
   };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
   @import './index';
   @import './main.less';
 </style>

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import "../../helpers/styles/func.less";
+@import "../../helpers/styles/variables.less";
+
+.title-item {
+  display: inline-block;
+}
+.active-title {
+  color: #fff;
+  background: @base-color;
+  position: relative;
+  &::after {
+    @t: 6px;
+    position: absolute;
+    content: '';
+    border-left: @t solid transparent;
+    border-right: @t solid transparent;
+    border-top: @t solid @base-color;
+    bottom: -@t;
+  }
+}
+.content-title {
+  color: @base-color;
+  text-align: left;
+}
+.tab-content {
+  background: @body-color;
+  box-sizing: border-box;
+}
+.divide {
+  display: block;
+  background: #ccc;
+}
+.des {
+  line-height: 1.75;
+  text-align: left;
+}

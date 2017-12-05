@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@import "../../helpers/styles/func.less";
+@import "../../helpers/styles/variables.less";
+
+@p: 10px;
+
+.tab {
+  width: 100%;
+}
+.title-container {
+  width: 100%;
+  background: #fff;
+}
+.width-base {
+  min-width: @min-width;
+  max-width: @max-width;
+}
+.tab-title {
+  .width-base();
+  margin: auto;
+  cursor: pointer;
+}
+.base-active {
+  color: #fff;
+  background: @base-color;
+}
+.title-item {
+  display: inline-block;
+  padding: 12px 0px;
+  &:hover {
+    .base-active();
+    transition: all 0.3s;
+  }
+}
+.t(@s) {
+  .font-sw(@s);
+  line-height: @s + @p;
+}
+.title {
+  .t(@font-size * 2);
+}
+.small-title {
+  .t(@font-size);
+}
+.tab-content {
+  padding: 88px 12px 25px;
+  margin: auto;
+  .width-base();
+  height: 450px;
+}
+.content-item {
+  position: relative;
+}
+.content-title {
+  .font-sw(42px);
+}
+.divide {
+  @p: 12px;
+  width: 88px;
+  height: 4px;
+  margin: 2 * @p 0px @p 0px;
+}
+.des {
+  width: 540px;
+  margin-top: 30px;
+}
+.pic {
+  display: inline-block;
+  position: absolute;
+  top: -20px;
+  right: 0px;
+}

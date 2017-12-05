@@ -25,9 +25,9 @@
 }
 
 /* 设置垂直方向margin */
-.rem-margin-v(@v) {
+.rem-margin-v(@v, @cs: auto) {
   .rem(@v);
-  margin: @s auto;
+  margin: @s @cs;
 }
 
 /* 设置水平方向的margin */

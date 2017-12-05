@@ -2,6 +2,7 @@ import Vue from 'vue';
 import 'Styles/reset.less';
 import Container from 'Components/Container/index';
 import Slider from 'Components/Slider/Slider';
+import Tab from 'Components/Tab/Tab';
 import App from './App';
 import router from './router';
 
@@ -10,6 +11,7 @@ Vue.config.productionTip = false;
 // register component
 Vue.component('Container', Container);
 Vue.component('Slider', Slider);
+Vue.component('Tab', Tab);
 
 /* eslint-disable no-new */
 new Vue({
