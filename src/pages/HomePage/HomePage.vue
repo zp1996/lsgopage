@@ -3,6 +3,7 @@
     <div class="homepage" slot="content">
       <Slider :list="slider.list" :time="slider.time" />
       <Tab :tab="tab" />
+      <ToTop v-if="pc" />
       <div>
         <h1>hello world</h1>
       </div>
@@ -16,6 +17,7 @@
   export default {
     data() {
       return {
+        pc: !process.mobile,
         slider: {
           list: [
             {

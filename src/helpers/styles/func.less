@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import "./variables.less";
+
 @baseFontSize: 75px;
 
 .rem(@px) {
@@ -106,4 +108,8 @@
 .font-sw(@s) {
   font-size: @s;
   font-weight: 400;
+}
+.width-base {
+  min-width: @min-width;
+  max-width: @max-width;
 }
