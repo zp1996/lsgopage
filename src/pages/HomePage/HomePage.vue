@@ -4,9 +4,7 @@
       <Slider :list="slider.list" :time="slider.time" />
       <Tab :tab="tab" />
       <ToTop v-if="pc" />
-      <div>
-        <h1>hello world</h1>
-      </div>
+      <NewList :news="news" />
     </div>
   </Container>
 </template>
@@ -63,6 +61,25 @@
             stitle: 'Clever Software',
             des: '智能软件包括基于机器人技术的智能系统和数据机房业务两大模块。提供多样的智能化需求，结合物联网、大数据等平台，实现数据在现、数据分析、数据状态诊断、决策与控制等需要，在技术上更加符合市场需求。',
             pic: 'http://www.yijiahe.com.cn/temp/robot_03.png',
+          },
+        ],
+        news: [
+          {
+            title: '亿嘉和参加2017国际服务机器人产业高峰论坛并发表主题演讲',
+            img: 'http://www.yijiahe.com.cn/mainpic//2017/12/05/0f42568c4bcf1b1afedc1cc618e37d24.jpg',
+            des: '公司副总裁许春山博士发表《积极参与行业标准 谋求快速发展通道》的主题演讲。',
+          }, {
+            title: '十三届全运会开幕：亿嘉和机器人助力电力保障',
+            img: 'http://www.yijiahe.com.cn/mainpic//2017/12/05/8637c0db35331aec510aac04107c133d.jpg',
+            des: '第十三届全国运动会在天津隆重开幕，亿嘉和智能巡检机器人助力全运会保电工作。',
+          }, {
+            title: '亿嘉和受邀参加 “未来已来”全球人工智能高峰论坛暨中国（杭州）人工智能小镇启动仪式 ',
+            img: 'http://www.yijiahe.com.cn/mainpic//2017/12/05/a62d68f75eaee3cc445a3abce56b72bc.jpg',
+            des: '',
+          }, {
+            title: '大院大所合作对接会召开 亿嘉和-东南大学合作研发机器人',
+            img: 'http://www.yijiahe.com.cn/mainpic//2017/07/08/44826067c1c591253c8793ebcc4d312f.jpg',
+            des: '亿嘉和与东南大学开展产学研合作，联合攻克机器人关键技术。',
           },
         ],
       };

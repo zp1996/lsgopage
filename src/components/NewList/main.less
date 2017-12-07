@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@import "../../helpers/styles/func.less";
+@import "../../helpers/styles/variables.less";
+
+.news-list {
+  text-align: left;
+}
+.zn-title {
+  color: @base-color;
+}
+.en-title {
+  color: #888;
+  vertical-align: middle;
+}
+.divide {
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  background: #f60;
+  vertical-align: middle;
+}
+.list {
+  overflow: hidden;
+}
+.list-item {
+  float: left;
+  box-sizing: border-box;
+  &-img {
+    width: 100%;
+  }
+  &-title {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #121212;
+  }
+}

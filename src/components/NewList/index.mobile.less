@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@import "../../helpers/styles/func.less";
+@import "../../helpers/styles/variables.less";
+
+.news-list {
+  .rem-padding-c(12px);
+  .rem-padding-top(20px);
+  background: @body-color;
+  .rem-margin-bottom(60px);
+}
+.title {
+  .rem-margin-bottom(30px);
+}
+.zn-title {
+  .font-sw(24px);
+}
+.en-title {
+  .font-sw(@font-size);
+}
+.list-item {
+  width: 50%;
+  float: left;
+  .rem-padding(12px);
+  &-title {
+    font-size: @font-size;
+    background: #fff;
+    box-sizing: border-box;
+    .rem-padding(20px);
+  }
+}

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 @import "../../helpers/styles/variables.less";
+@import "../../helpers/styles/func.less";
 
 @nav-d: 12px;
 
@@ -100,7 +101,7 @@
   line-height: @h;
   font-size: @sm-font-size;
   &-content {
-    margin: auto;
+    .width-base();
     height: @h;
     padding: 0px 12px;
     text-align: left;
