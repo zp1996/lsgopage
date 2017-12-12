@@ -31,6 +31,7 @@
         <span class="address">公司地址：{{footer.address}}</span>
       </div>
     </footer>
+    <ToTop />
   </div>
 </template>
 
