@@ -3,8 +3,8 @@ export default {
   menus: [
     { href: '/', name: '首页' },
     { href: '/introduction', name: '公司介绍' },
-    { href: '/newlist', name: '新闻媒体' },
-    { href: '/test', name: '联系我们' },
+    { href: '/news', name: '新闻媒体' },
+    { href: '/concat', name: '联系我们' },
   ],
   footer: {
     address: '河北省保定市华北电力大学二校区',

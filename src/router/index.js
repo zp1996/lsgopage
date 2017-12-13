@@ -2,6 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import HomePage from 'Pages/HomePage/HomePage';
 import IntroductionPage from 'Pages/IntroductionPage/IntroductionPage';
+import NewsPage from 'Pages/NewsPage/NewsPage';
+import ConcatPage from 'Pages/ConcatPage/ConcatPage';
 
 Vue.use(Router);
 
@@ -17,6 +19,16 @@ export default new Router({
       path: '/introduction',
       name: 'introduction',
       component: IntroductionPage,
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: NewsPage,
+    },
+    {
+      path: '/concat',
+      name: 'concat',
+      component: ConcatPage,
     },
   ],
 });

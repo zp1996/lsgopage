@@ -8,5 +8,5 @@ export function getCompanyData() {
 }
 
 export function getConcatData() {
-
+  return get('/introduction/getConcat');
 }

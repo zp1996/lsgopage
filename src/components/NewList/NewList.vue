@@ -1,6 +1,6 @@
 <template>
   <div class="news-list">
-    <h2 class="title">
+    <h2 class="title" v-if="!notitle">
       <span class="zn-title">新闻媒体</span>
       <span class="en-title">Latest News</span>
       <i class="divide"></i>
@@ -21,7 +21,7 @@
 
 <script>
   export default {
-    props: ['news'],
+    props: ['news', 'notitle'],
     data() {
       return {
         pc: !process.mobile,
