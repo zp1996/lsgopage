@@ -40,9 +40,6 @@
 
   export default {
     props: ['children'],
-    mounted() {
-      console.log(process.mobile);
-    },
     data() {
       return {
         search: '',

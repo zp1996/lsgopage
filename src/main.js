@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import 'Styles/reset.less';
 import Container from 'Components/Container/index';
+import DetailContainer from 'Components/DetailContainer/DetailContainer';
 import Slider from 'Components/Slider/Slider';
 import Tab from 'Components/Tab/Tab';
 import ToTop from 'Components/ToTop/ToTop';
@@ -15,6 +16,7 @@ Vue.component('Container', Container);
 Vue.component('Slider', Slider);
 Vue.component('Tab', Tab);
 Vue.component('NewList', NewList);
+Vue.component('DetailContainer', DetailContainer);
 if (!process.mobile) {
   Vue.component('ToTop', ToTop);
 }

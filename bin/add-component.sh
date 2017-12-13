@@ -9,11 +9,13 @@ cd ${dir}
 echo "<template>
 
 </template>
+
 <script>
   export default {
 
   };
 </script>
+
 <style lang=\"less\">
   @import './index';
 </style>
@@ -23,6 +25,6 @@ echo "@charset \"UTF-8\";
 
 @import \"../../helpers/styles/func.less\";
 @import \"../../helpers/styles/variables.less\";
-" > ./${component}.mobile.less
+" > ./index.mobile.less
 
-cp ./${component}.mobile.less ${component}.less
+cp ./index.mobile.less index.less

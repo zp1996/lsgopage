@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import HomePage from 'Pages/HomePage/HomePage';
-import DemoPage from 'Pages/DemoPage/DemoPage';
+import IntroductionPage from 'Pages/IntroductionPage/IntroductionPage';
 
 Vue.use(Router);
 
@@ -14,9 +14,9 @@ export default new Router({
       component: HomePage,
     },
     {
-      path: '/demo',
-      name: 'demo',
-      component: DemoPage,
+      path: '/introduction',
+      name: 'introduction',
+      component: IntroductionPage,
     },
   ],
 });

@@ -22,5 +22,9 @@ npm run mobile
 
 移动端与pc端需要区分的组件，用`js`文件来决定如何引入，以下方式可以便捷添加
 ```
-./bin/import-index.sh <component name>
+cd bin && ./import-index.sh <component name>
+```
+添加组件
+```
+cd bin && ./add-component.sh <component name>
 ```

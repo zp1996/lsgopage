@@ -1,6 +1,6 @@
 <template>
   <Container>
-    <div class="homepage" slot="content">
+    <div slot="content">
       <Slider :list="slider.list" :time="slider.time" />
       <Tab :tab="tab" />
       <NewList :news="news" />
@@ -90,5 +90,5 @@
 </script>
 
 <style lang="less">
-  @import './index';
+  
 </style>
