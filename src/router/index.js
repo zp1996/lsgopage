@@ -4,6 +4,7 @@ import HomePage from 'Pages/HomePage/HomePage';
 import IntroductionPage from 'Pages/IntroductionPage/IntroductionPage';
 import NewsPage from 'Pages/NewsPage/NewsPage';
 import ConcatPage from 'Pages/ConcatPage/ConcatPage';
+import DetailPage from 'Pages/DetailPage/DetailPage';
 
 Vue.use(Router);
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/concat',
       name: 'concat',
       component: ConcatPage,
+    },
+    {
+      path: '/detailnew/:id',
+      name: 'detailnew',
+      component: DetailPage,
     },
   ],
 });

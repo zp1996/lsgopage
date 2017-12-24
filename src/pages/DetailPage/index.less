@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+@import "../../helpers/styles/variables.less";
+@import "../../helpers/styles/func.less";
+
+@p: 88px;
+
+.detail-container {
+  background: #fff;
+  padding: @p / 2 @p;
+  max-width: @max-width;
+  .width-base();
+  box-sizing: border-box;
+  margin-top: -@p;
+}
+.title-wrapper {
+  margin-bottom: @p / 4;
+}
+.title {
+  line-height: 3 * @bg-font-size;
+}
+.time {
+  font-size: @font-size;
+  line-height: 2 * @font-size;
+}
+:global(.content-wrapper) {
+  line-height: 2;
+  font-size: @bg-font-size;
+}
+:global(.content-wrapper p) {
+  margin-bottom: 15px;
+}

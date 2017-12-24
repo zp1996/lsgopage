@@ -43,21 +43,26 @@
 
 <script>
   export default {
-    mounted() {
-      const { slider, container } = this.$refs;
+    updated() {
+      const { length } = this.$props.list;
 
-      const width = container.offsetWidth;
-      this.awidth = `${width * this.n}px`;
-      this.swidth = `${width}px`;
+      if (this.$props.list.length && !this.init) {
+        const { slider, container } = this.$refs;
+        this.n = length + 1;
+        const width = container.offsetWidth;
+        this.awidth = `${width * this.n}px`;
+        this.swidth = `${width}px`;
 
-      const node = slider.childNodes[0].cloneNode(true);
-      node.style.width = this.swidth;
-      slider.appendChild(node);
+        const node = slider.childNodes[0].cloneNode(true);
+        node.style.width = this.swidth;
+        slider.appendChild(node);
+        // 自动轮播
+        this.sport();
+        // 监听移动事件
+        this.move();
 
-      // 自动轮播
-      this.sport();
-      // 监听移动事件
-      this.move();
+        this.init = true;
+      }
     },
     destroyed() {
       if (this.timer != null) {
@@ -74,6 +79,7 @@
         dindex: 0,      // dots索引
         pos: 0,         // wrapper div position
         n: this.$props.list.length + 1,
+        init: false,
       };
     },
     methods: {

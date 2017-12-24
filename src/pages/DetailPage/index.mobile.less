@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+@import "../../helpers/styles/variables.less";
+@import "../../helpers/styles/func.less";
+
+.detail-container {
+  .rem-margin-c(24px);
+  .rem-margin-top(-44px);
+  .rem-padding(24px);
+  background: @bg-color;
+}
+.title {
+  .font-sw(24px);
+  line-height: 1.5;
+}
+.time {
+  .font-sw(@font-size);
+  line-height: 2;
+}
+:global(.content-wrapper) {
+  line-height: 1.6;
+  font-size: @bg-font-size;
+  .rem-margin-top(24px);
+}
+:global(.content-wrapper p) {
+  .rem-margin-bottom(16px);
+}

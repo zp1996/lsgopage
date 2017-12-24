@@ -51,4 +51,7 @@
     display: block;
     background: #fff;
   }
+  .white-content {
+    background: #fff;
+  }
 </style>
