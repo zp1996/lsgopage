@@ -36,7 +36,7 @@
 </template>
 
 <script>
-  import data from './data';
+  import Data from './data';
 
   export default {
     props: ['children'],
@@ -44,9 +44,10 @@
       return {
         search: '',
         path: this.$route.path,
-        ...data,
+        ...Data.data,
       };
     },
+    created: Data.created(),
   };
 </script>
 

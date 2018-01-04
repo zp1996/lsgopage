@@ -6,7 +6,15 @@ import { get } from './base';
 export function getHomePageData() {
   return get('/home');
 }
-
-export function Test() {
-
+/**
+ * 获取新闻媒体页数据
+ */
+export function getNewsPageData(page = 1) {
+  return get(`/news/${page}`);
+}
+/**
+ * 获取导航数据
+ */
+export function getMenu() {
+  return get('/menus');
 }

@@ -9,6 +9,6 @@ export function getContent(id) {
 /**
  * 获取新闻列表
  */
-export function getList() {
-
+export function getList(page = 1) {
+  return get(`/news/getList/${page}`);
 }

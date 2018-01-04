@@ -41,19 +41,17 @@
 </template>
 
 <script>
-  import data from './data';
+  import Data from './data';
 
   export default {
     props: ['children'],
-    mounted() {
-      console.log(process.mobile);
-    },
     data() {
       return {
         touched: 0,
-        ...data,
+        ...Data.data,
       };
     },
+    created: Data.created(),
     methods: {
       toggleNav() {
         this.touched = !this.touched;
